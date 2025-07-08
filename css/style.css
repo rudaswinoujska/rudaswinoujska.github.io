@@ -74,6 +74,10 @@ body {
 .hover-underline:hover::before {
     transform: scaleX(1);
     opacity: 1;
+
+
+
+
 }
 
 .submenu {
@@ -230,7 +234,7 @@ p {
     background-image: url('../img/banner6.jpg');
     background-size: cover;
     background-position: center;
-    filter: grayscale(40%) hue-rotate(-30deg);
+    filter: grayscale(0%) hue-rotate(-10deg);
     border-radius: 25px;
 }
 
