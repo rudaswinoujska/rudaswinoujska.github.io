@@ -610,6 +610,10 @@ video {
   margin: 1rem;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -750,6 +754,10 @@ video {
 
 .h-16 {
   height: 4rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .min-h-8 {
@@ -1262,6 +1270,11 @@ video {
 
 .text-\[var\(--mid\)\] {
   color: var(--mid);
+}
+
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(188 154 151 / var(--tw-text-opacity));
 }
 
 .shadow-md {
