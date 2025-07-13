@@ -54,65 +54,69 @@
     <div id="frame" class="">
 
         <!-- header -->
-        <header class="h-20">
-            <div class="max-w-6xl mx-auto flex items-center justify-between">
-                <!-- Logo -->
-                <div class="p-4"><img class="h-12" src="img/logo-z2.png" alt="PSO"></div>
-
-                <!-- Hamburger button for mobile -->
-                <button id="menu-toggle" class="lg:hidden block p-2 ml-auto self-start border rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <!-- navigacja -->
-                <div class="w-3/5 h-full flex items-center p-2">
-                    <!-- Nawigacja -->
-                    <nav id="navbar" class="lg:flex hidden h-full">
-                        <ul class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
-                            <li class="group relative  ">
-                                <a href="#" class="nav-link hover-underline p-4">PSO</a>
-                                <ul class="submenu min-w-max absolute hidden bg-krem shadow-md group-hover:block">
-                                    <li><a href="#" class="sub-link">Historia</a></li>
-                                    <li><a href="#" class="sub-link">Statut</a></li>
-                                    <li><a href="#" class="sub-link">Zarząd</a></li>
-                                    <li class="min-w-max"><a href="#" class="sub-link">Zostań członkiem</a></li>
-                                </ul>
-                            </li>
-                            <li class="group relative ">
-                                <a href="#" class="nav-link hover-underline p-4">Aktualności</a>
-                            </li>
-                            <li class="group relative">
-                                <a href="#" class="nav-link hover-underline p-4 min-w-max">Zawód ortoptystki</a>
-                                <ul class="submenu absolute hidden bg-krem shadow-md group-hover:block">
-                                    <li><a href="#" class="sub-link">Czym zajmuje się ortoptystka?</a></li>
-                                    <li><a href="#" class="sub-link">Lista specialistów</a></li>
-                                    <li><a href="#" class="sub-link">Kształcenie</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="group relative ">
-                                <a href="#" class="nav-link hover-underline p-4 min-w-max">Dla specjalistów</a>
-                                <ul class="submenu absolute hidden bg-krem shadow-md group-hover:block">
-                                    <li><a href="#" class="sub-link">Szkolenie</a></li>
-                                    <li><a href="#" class="sub-link">Standard badań</a></li>
-                                    <li><a href="#" class="sub-link">Zalecenia PTO</a></li>
-                                    <li class="min-w-max"><a href="#" class="sub-link">Rozporządzenie MZ</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="group relative ">
-                                <a href="#" class="nav-link hover-underline p-4">Kontakt</a>
-                            </li>
-
-
-                        </ul>
-                    </nav>
+        <header class="h-auto">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
+                <!-- Wiersz: logo + hamburger -->
+                <div class="w-full flex items-center justify-between">
+                    <img class="m-4 w-auto h-[40px] xs:h-12 object-cover" src="img/logo-z2.png" alt="PSO">
+                    <button id="menu-toggle" class="lg:hidden block p-2 border rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
+                <!-- Nawigacja -->
+                <nav id="navbar" class="lg:flex h-full p-2 w-full flex items-center justify-center hidden">
+                    <ul class="w-full flex flex-col lg:flex-row space-y-0 lg:space-y-0 justify-around">
+                        <li class="group relative">
+                            <a href="#" id="dropdownNavbarLink" class="nav-link hover-underline p-2 lg:p-4 flex items-center justify-between">
+                                PSO
+                               
+                            </a>
+                            <ul id="dropdownNavbar" class="submenu min-w-max absolute hidden bg-krem group-hover:block z-20">
+                                <li><a href="#" class="sub-link">Historia</a></li>
+                                <li><a href="#" class="sub-link">Statut</a></li>
+                                <li><a href="#" class="sub-link">Zarząd</a></li>
+                                <li class="min-w-max"><a href="#" class="sub-link">Zostań członkiem</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative">
+                            <a href="#" class="nav-link hover-underline p-2 lg:p-4">Aktualności</a>
+                        </li>
+                        <li class="group relative">
+                            <a href="#" id="dropdownZawodLink" class="nav-link hover-underline p-2 lg:p-4 min-w-max flex items-center justify-between">
+                                Zawód ortoptystki
+                                
+                            </a>
+                            <ul id="dropdownZawod" class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20">
+                                <li><a href="#" class="sub-link">Czym zajmuje się ortoptystka?</a></li>
+                                <li><a href="#" class="sub-link">Lista specialistów</a></li>
+                                <li><a href="#" class="sub-link">Kształcenie</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative">
+                            <a href="#" id="dropdownSpecLink" class="nav-link hover-underline p-2 lg:p-4 min-w-max flex items-center justify-between">
+                                Dla specjalistów
+                               
+                            </a>
+                            <ul id="dropdownSpec" class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20">
+                                <li><a href="#" class="sub-link">Szkolenie</a></li>
+                                <li><a href="#" class="sub-link">Standard badań</a></li>
+                                <li><a href="#" class="sub-link">Zalecenia PTO</a></li>
+                                <li class="min-w-max"><a href="#" class="sub-link">Rozporządzenie MZ</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative">
+                            <a href="#" class="nav-link hover-underline p-2 lg:p-4">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+
                 <!-- panel sterowania -->
-                <div class="w-1/5 h-full items-center justify-end hidden lg:flex">
+                <div class="w-auto h-full items-center justify-end hidden lg:flex">
+
                     <!-- Przełącznik trybu ciemnego -->
 
                     <label for="darkSwitch" class="relative inline-block m-4 min-w-14 min-h-8 cursor-pointer">
@@ -167,8 +171,15 @@
 
 
                 </div>
+                <!-- Hamburger button for mobile -->
+               
             </div>
+
+
         </header>
+
+
+       
 
 
         <!-- MISJA / O NAS -->
@@ -242,7 +253,8 @@
                 <p>
                     Wspieramy specjalistów, edukujemy, działamy na rzecz zdrowia oczu w Polsce.
                     Tworzymy przestrzeń do wymiany doświadczeń i rozwoju zawodowego ortoptystów.
-                    Naszym celem jest podnoszenie standardów opieki ortoptycznej oraz promocja profilaktyki zdrowia wzroku.
+                    Naszym celem jest podnoszenie standardów opieki ortoptycznej oraz promocja profilaktyki zdrowia
+                    wzroku.
                 </p>
             </div>
             <!-- 2+3: Kontakt + Dane formalne razem -->
@@ -273,7 +285,8 @@
             </div>
         </div>
         <div class="text-center text-[#777777] text-xspy-2 border-t border-ciemny/20 mt-4">
-            &copy; 2025 Polskie Stowarzyszenie Ortoptystów. Wszelkie prawa zastrzeżone. Wykonano z pasją przez Zuzannę Osuch.
+            &copy; 2025 Polskie Stowarzyszenie Ortoptystów. Wszelkie prawa zastrzeżone. Wykonano z pasją przez Zuzannę
+            Osuch.
         </div>
     </footer>
 

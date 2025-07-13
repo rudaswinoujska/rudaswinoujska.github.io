@@ -74,10 +74,6 @@ body {
 .hover-underline:hover::before {
     transform: scaleX(1);
     opacity: 1;
-
-
-
-
 }
 
 .submenu {
@@ -123,6 +119,44 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    #navbar {
+        position: relative;
+        width: 100%;
+        background: var(--krem);
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 24px #0001;
+        margin-top: 0;
+        z-index: 2;
+        border: none;
+        outline: none;
+
+    }
+
+    #navbar::after {
+        display: none;
+
+    }
+
+    .submenu {
+        position: static !important;
+        box-shadow: none;
+        border: none;
+        outline: none;
+
+    }
+
+    .submenu li a {
+        border: none !important;
+        outline: none !important;
+    }
+
+    .hover-underline:hover::after,
+    .hover-underline:hover::before {
+        display: none;
+    }
 }
 
 h2 {
