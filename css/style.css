@@ -146,9 +146,11 @@ header {
         border-bottom: var(--ciemny) 1px solid;
     }
 
-   
+     .nav-link:active {
+         letter-spacing: 0.2em;
+    }
 
-    .nav-link:active {
+    /* .nav-link:active {
         position: relative;
         background-color: var(--mid);
     }
@@ -160,9 +162,7 @@ header {
         top: 0;
         bottom: 0;
         width: 10px;
-        /* grubość linii */
         background: var(--mid);
-        /* kolor linii */
         pointer-events: none;
     }
 
@@ -172,7 +172,8 @@ header {
 
     .nav-link:active::after {
         right: -8px;
-    }
+    } */
+   
 
     .hidden {
         display: none !important;
