@@ -25,6 +25,13 @@ body {
     /* nie wiem dlaczego, ale tak działa */
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--krem);
+}
+
 /* Menu inspirowane stylem DziewuchyDziewuchom.pl */
 .nav-link {
     text-decoration: none;
@@ -123,16 +130,52 @@ body {
 
 @media (max-width: 1023px) {
     #navbar {
-        position: relative;
+        position: absolute;
         width: 100%;
+        height: auto;
         background: var(--krem);
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 24px #0001;
-        margin-top: 0;
+        margin-top: 4rem;
         z-index: 2;
         border: none;
         outline: none;
+        border: var(--ciemny) 1px solid;
 
+    }
+
+    nav li {
+        border-bottom: var(--ciemny) 1px solid;
+    }
+
+   
+
+    .nav-link:active {
+        position: relative;
+        background-color: var(--mid);
+    }
+
+   .nav-link:active::before,
+    .nav-link:active::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        /* grubość linii */
+        background: var(--mid);
+        /* kolor linii */
+        pointer-events: none;
+    }
+
+    .nav-link:active::before {
+        left: -8px;
+    }
+
+    .nav-link:active::after {
+        right: -8px;
+    }
+
+    .hidden {
+        display: none !important;
     }
 
     #navbar::after {
@@ -141,11 +184,12 @@ body {
     }
 
     .submenu {
-        position: static !important;
+        position: absolute;
+        left: 20px;
         box-shadow: none;
-        border: none;
+        border: var(--ciemny) 1px solid;
         outline: none;
-
+        display: none
     }
 
     .submenu li a {

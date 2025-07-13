@@ -13,6 +13,8 @@
     <!-- Podpięcie pliku CSS -->
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="css/style.css">
+   
+
 
     <!-- Podpięcie pliku JS -->
     <script src="js/script.js" defer></script>
@@ -55,11 +57,11 @@
 
         <!-- header -->
         <header class="h-auto">
-            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
-                <!-- Wiersz: logo + hamburger -->
-                <div class="w-full flex items-center justify-between">
-                    <img class="m-4 w-auto h-[40px] xs:h-12 object-cover" src="img/logo-z2.png" alt="PSO">
-                    <button id="menu-toggle" class="lg:hidden block p-2 border rounded">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start lg:items-center">
+                <!-- Logo + hamburger -->
+                <div class="flex items-center justify-between lg:justify-start w-full lg:w-auto">
+                    <img class="mb-4 md:m-4 h-[40px] xs:h-12 w-auto object-contain" src="img/logo-z2.png" alt="PSO">
+                    <button id="menu-toggle" class="lg:hidden block p-2 border rounded ml-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -67,119 +69,64 @@
                         </svg>
                     </button>
                 </div>
+
                 <!-- Nawigacja -->
-                <nav id="navbar" class="lg:flex h-full p-2 w-full flex items-center justify-center hidden">
-                    <ul class="w-full flex flex-col lg:flex-row space-y-0 lg:space-y-0 justify-around">
+                <nav id="navbar" class="lg:flex h-full p-2 flex-1 items-center justify-center hidden">
+                    <ul class="w-full flex flex-col lg:flex-row justify-between">
                         <li class="group relative">
-                            <a href="#" id="dropdownNavbarLink" class="nav-link hover-underline p-2 lg:p-4 flex items-center justify-between">
-                                PSO
-                               
-                            </a>
-                            <ul id="dropdownNavbar" class="submenu min-w-max absolute hidden bg-krem group-hover:block z-20">
+                            <a href="#" class="nav-link p-2 lg:p-4 flex items-center justify-between"
+                                data-dropdown-toggle="dropdownNavbar">PSO</a>
+                            <ul id="dropdownNavbar"
+                                class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20 mt-2 lg:mt-0">
                                 <li><a href="#" class="sub-link">Historia</a></li>
                                 <li><a href="#" class="sub-link">Statut</a></li>
                                 <li><a href="#" class="sub-link">Zarząd</a></li>
-                                <li class="min-w-max"><a href="#" class="sub-link">Zostań członkiem</a></li>
+                                <li><a href="#" class="sub-link">Zostań członkiem</a></li>
                             </ul>
                         </li>
+                        <li><a href="#" class="nav-link p-2 lg:p-4">Aktualności</a></li>
                         <li class="group relative">
-                            <a href="#" class="nav-link hover-underline p-2 lg:p-4">Aktualności</a>
-                        </li>
-                        <li class="group relative">
-                            <a href="#" id="dropdownZawodLink" class="nav-link hover-underline p-2 lg:p-4 min-w-max flex items-center justify-between">
-                                Zawód ortoptystki
-                                
-                            </a>
-                            <ul id="dropdownZawod" class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20">
+                            <a href="#" class="nav-link p-2 lg:p-4 flex items-center justify-between"
+                                data-dropdown-toggle="dropdownZawod">Zawód ortoptystki</a>
+                            <ul id="dropdownZawod"
+                                class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20 mt-2 lg:mt-0">
                                 <li><a href="#" class="sub-link">Czym zajmuje się ortoptystka?</a></li>
-                                <li><a href="#" class="sub-link">Lista specialistów</a></li>
+                                <li><a href="#" class="sub-link">Lista specjalistów</a></li>
                                 <li><a href="#" class="sub-link">Kształcenie</a></li>
                             </ul>
                         </li>
                         <li class="group relative">
-                            <a href="#" id="dropdownSpecLink" class="nav-link hover-underline p-2 lg:p-4 min-w-max flex items-center justify-between">
-                                Dla specjalistów
-                               
-                            </a>
-                            <ul id="dropdownSpec" class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20">
+                            <a href="#" class="nav-link p-2 lg:p-4 flex items-center justify-between"
+                                data-dropdown-toggle="dropdownSpec">Dla specjalistów</a>
+                            <ul id="dropdownSpec"
+                                class="submenu absolute hidden bg-krem shadow-md group-hover:block z-20 mt-2 lg:mt-0">
                                 <li><a href="#" class="sub-link">Szkolenie</a></li>
                                 <li><a href="#" class="sub-link">Standard badań</a></li>
                                 <li><a href="#" class="sub-link">Zalecenia PTO</a></li>
-                                <li class="min-w-max"><a href="#" class="sub-link">Rozporządzenie MZ</a></li>
+                                <li><a href="#" class="sub-link">Rozporządzenie MZ</a></li>
                             </ul>
                         </li>
-                        <li class="group relative">
-                            <a href="#" class="nav-link hover-underline p-2 lg:p-4">Kontakt</a>
-                        </li>
+                        <li><a href="#" class="nav-link p-2 lg:p-4">Kontakt</a></li>
                     </ul>
                 </nav>
 
-                <!-- panel sterowania -->
-                <div class="w-auto h-full items-center justify-end hidden lg:flex">
-
-                    <!-- Przełącznik trybu ciemnego -->
-
-                    <label for="darkSwitch" class="relative inline-block m-4 min-w-14 min-h-8 cursor-pointer">
+                <!-- Ciemny tryb -->
+                <div class="hidden lg:flex items-center">
+                    <label for="darkSwitch" class="relative inline-block m-4 cursor-pointer">
                         <input type="checkbox" id="darkSwitch" class="peer sr-only">
-                        <!-- Tło przełącznika -->
-                        <span class="absolute inset-0 rounded-full border border-ciemny bg-transparent"></span>
-                        <!-- Słońce -->
-                        <span id="sun" class="absolute ease-in-out z-10 switch-show">
-                            <svg class="w-5 h-5 text-ciemny scale-90" fill="currentColor" stroke="currentColor"
-                                stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                    d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-                                    stroke-width="0" fill="currentColor"></path>
-
-                                <path
-                                    d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path
-                                    d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path
-                                    d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path
-                                    d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path
-                                    d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-                                    stroke-width="0" fill="currentColor"></path>
-                                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
-                                    stroke-width="0" fill="currentColor"></path>
-
-                            </svg>
-                        </span>
-                        <!-- Księżyc -->
-                        <span id="moon" class="absolute ease-in-out z-10 switch-hide">
-                            <svg class="w-5 h-5 text-ciemny scale-90" fill="currentColor" stroke="currentColor"
-                                stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                    d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
-                                    stroke-width="0" fill="currentColor"></path>
-                            </svg>
-                        </span>
+                        <span class="absolute inset-0 rounded-full border border-ciemny"></span>
+                        <span id="sun" class="absolute z-10 switch-show">…</span>
+                        <span id="moon" class="absolute z-10 switch-hide">…</span>
                     </label>
-
-
-
                 </div>
-                <!-- Hamburger button for mobile -->
-               
             </div>
-
-
         </header>
 
+    
 
-       
+
+
+
 
 
         <!-- MISJA / O NAS -->
