@@ -323,7 +323,7 @@ p {
     background-image: url('../img/banner6.jpg');
     background-size: cover;
     background-position: center;
-    filter: grayscale(0%) hue-rotate(-10deg);
+    filter: grayscale(20%) hue-rotate(-20deg);
     border-radius: 25px;
 }
 
